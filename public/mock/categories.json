@@ -1,0 +1,24 @@
+
+[
+  {
+    "id": 1,
+    "name": "Mock Category 1",
+    "image": {
+      "src": "https://via.placeholder.com/150"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Mock Category 2",
+    "image": {
+      "src": "https://via.placeholder.com/150"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Mock Category 3",
+    "image": {
+      "src": "https://via.placeholder.com/150"
+    }
+  }
+]

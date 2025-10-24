@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "rendered": "Mock Post 1"
+    },
+    "content": {
+      "rendered": "<p>This is the content of the first mock post.</p>"
+    },
+    "excerpt": {
+      "rendered": "<p>This is the excerpt of the first mock post.</p>"
+    },
+    "date": "2025-10-24T10:00:00",
+    "_embedded": {
+      "author": [
+        {
+          "name": "Mock Author 1"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "source_url": "https://via.placeholder.com/150"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "title": {
+      "rendered": "Mock Post 2"
+    },
+    "content": {
+      "rendered": "<p>This is the content of the second mock post.</p>"
+    },
+    "excerpt": {
+      "rendered": "<p>This is the excerpt of the second mock post.</p>"
+    },
+    "date": "2025-10-23T10:00:00",
+    "_embedded": {
+      "author": [
+        {
+          "name": "Mock Author 2"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "source_url": "https://via.placeholder.com/150"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": {
+      "rendered": "Mock Post 3"
+    },
+    "content": {
+      "rendered": "<p>This is the content of the third mock post.</p>"
+    },
+    "excerpt": {
+      "rendered": "<p>This is the excerpt of the third mock post.</p>"
+    },
+    "date": "2025-10-22T10:00:00",
+    "_embedded": {
+      "author": [
+        {
+          "name": "Mock Author 3"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "source_url": "https://via.placeholder.com/150"
+        }
+      ]
+    }
+  }
+]
