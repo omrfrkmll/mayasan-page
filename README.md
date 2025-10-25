@@ -1,37 +1,37 @@
-## MA-YA-SAN Web Sitesi Projesi
+# MA-YA-SAN Website Project
 
-Bu proje, metal işleri sektörüne özel olarak tasarlanmış, modern bir WordPress backend ve React frontend entegrasyonuna sahip, çok sayfalı bir web sitesidir. Kullanıcı deneyimini artırmak amacıyla Apple tarzı kaydırmaya duyarlı video hikaye anlatımı ve modüler e-ticaret özellikleri içermektedir.
+This project is a multi-page website specifically designed for the metalworking industry, featuring a modern WordPress backend and a React frontend integration. It includes Apple-style scroll-driven video storytelling and modular e-commerce functionalities to enhance the user experience.
 
-### Özellikler:
+### Features:
 
-*   **Modern Tasarım ve UX:** Minimalist, şık, kullanıcı dostu arayüz. Koyu/açık mod desteği, yuvarlatılmış köşeler, hover animasyonları, paralaks efektler ve yumuşak geçişler. Görsel derinlik ve ambiyans için noisy blur efektleri.
-*   **Çok Sayfalı Yapı:** Ana Sayfa, Hakkımızda, Hizmetler, Hizmet Detayları, Blog, Ürünler, Ürün Detayları, Sepet, Ödeme, Sipariş Onayı, Kullanıcı Profili ve İletişim sayfaları.
-*   **Video Storytelling Modülü:** Ana sayfada, metal işleme süreçlerini (Lazer Kesim, Apkant Büküm, CNC Torna, CNC Freze) anlatan, kaydırmaya duyarlı (scroll-driven) videolar. Videolar dikey olarak ortalanmış, hafif karartı ve noisy blur filtreleri uygulanmıştır. Video üzerine yerleştirilmiş glassmorphism tarzı kartlar, asimetrik pozisyonlarda konumlandırılmıştır. Videolar sağdan sola kayma efektiyle geçiş yapmaktadır.
-*   **Animasyonlu Keyword Şeridi:** Sayfanın alt kısmında, metal işleme ile ilgili anahtar kelimeler ve glassmorphism tarzı iconlar içeren, sağdan sola kayan sürekli bir animasyon şeridi.
-*   **WooCommerce Entegrasyonu:** Perakende ürün satışı için WooCommerce REST API ile entegrasyon. Ürün listeleme, detay sayfaları, sepet ve ödeme süreçleri.
-*   **Modüler E-ticaret Özellikleri:** Ürün arama, filtreleme, kullanıcı profili ve sipariş geçmişi gibi genel e-ticaret özellikleri, `src/config/features.js` dosyası üzerinden kolayca etkinleştirilip devre dışı bırakılabilir.
-*   **Teknoloji Stack:** React 18+, Typescript, React Router, Axios, Framer Motion (animasyonlar için), Tailwind CSS (mod switcher stiline göre dinamik temalar için), Three.js (3D modeller için altyapı, şu an video ile değiştirildi), GSAP (karmaşık animasyonlar için).
-*   **WordPress Entegrasyonu:** WordPress sadece içerik yönetimi (CMS) için kullanılmakta olup, içerikler WordPress REST API veya WPGraphQL (tercihe bağlı) ile React uygulamasına çekilmektedir.
-*   **Responsive Tasarım:** Tüm cihazlarda sorunsuz görüntüleme ve kullanım.
-*   **Performans Odaklı:** Lazy loading ve API veri çağrılarında önbellekleme ve optimizasyon.
-*   **Temiz Kod:** İyi yorumlanmış, anlaşılır, temiz ve standartlara uygun kod yapısı.
+*   **Modern Design & UX:** Minimalist, elegant, and user-friendly interface. Supports dark/light mode, rounded corners, hover animations, parallax effects, and smooth transitions. Incorporates noisy blur effects for visual depth and ambiance.
+*   **Multi-Page Structure:** Includes Home, About Us, Services, Service Details, Blog, Products, Product Details, Cart, Checkout, Order Confirmation, User Profile, and Contact pages.
+*   **Video Storytelling Module:** On the homepage, scroll-driven videos narrate metal processing techniques (Laser Cutting, Press Brake Bending, CNC Lathe, CNC Milling). Videos are vertically centered, with a slight darkening and noisy blur filters applied. Glassmorphism-style cards are positioned asynchronously over the videos. Videos transition with a right-to-left sliding effect.
+*   **Animated Keyword Marquee:** A continuously scrolling animation strip at the bottom of the page, featuring metalworking-related keywords and glassmorphism-style icons.
+*   **WooCommerce Integration:** Integration with WooCommerce REST API for retail product sales. Includes product listing, detail pages, cart, and checkout processes.
+*   **Modular E-commerce Features:** General e-commerce features such as product search, filtering, user profiles, and order history can be easily enabled or disabled via the `src/config/features.js` file.
+*   **Technology Stack:** React 18+, Typescript, React Router, Axios, Framer Motion (for animations), Tailwind CSS (for dynamic themes based on mode switcher style), Three.js (infrastructure for 3D models, currently replaced by video), GSAP (for complex animations).
+*   **WordPress Integration:** WordPress is used solely for content management (CMS), with content fetched into the React application via WordPress REST API or WPGraphQL (optional).
+*   **Responsive Design:** Seamless viewing and usability across all devices.
+*   **Performance-Oriented:** Lazy loading and caching/optimization for API data calls.
+*   **Clean Code:** Well-commented, understandable, clean, and standard-compliant code structure.
 
-### Kurulum Talimatları:
+### Setup Instructions:
 
-1.  **Gereksinimler:** Node.js (v18+), pnpm (veya npm/yarn), WordPress kurulumu (WooCommerce eklentisi aktif).
+1.  **Requirements:** Node.js (v18+), pnpm (or npm/yarn), WordPress installation (with WooCommerce plugin active).
 
-2.  **Proje Kurulumu:**
+2.  **Project Setup:**
 
     ```bash
-    # Proje dizinine gidin
-    cd wordpress-react-mvp
-    # Bağımlılıkları yükleyin
+    # Navigate to the project directory
+    cd mayasan-page
+    # Install dependencies
     pnpm install
     ```
 
-3.  **Çevre Değişkenleri (`.env`):**
+3.  **Environment Variables (`.env`):**
 
-    `.env.example` dosyasını `production` ortamı için `.env.production` olarak kopyalayın ve aşağıdaki değişkenleri güncelleyin:
+    Copy the `.env.example` file as `.env.production` for the production environment and update the following variables:
 
     ```env
     VITE_WORDPRESS_API_URL=https://example.com/wp-json/wp/v2
@@ -40,47 +40,45 @@ Bu proje, metal işleri sektörüne özel olarak tasarlanmış, modern bir WordP
     VITE_WOOCOMMERCE_CONSUMER_SECRET=cs_YOUR_CONSUMER_SECRET
     ```
 
-    *   `VITE_WORDPRESS_API_URL`: WordPress sitenizin REST API URL'si.
-    *   `VITE_WOOCOMMERCE_API_URL`: WooCommerce REST API URL'si.
-    *   `VITE_WOOCOMMERCE_CONSUMER_KEY` ve `VITE_WOOCOMMERCE_CONSUMER_SECRET`: WooCommerce ayarlarından alacağınız API anahtarları. (`woocommerce_setup_guide.md` dosyasına bakın).
+    *   `VITE_WORDPRESS_API_URL`: Your WordPress site's REST API URL.
+    *   `VITE_WOOCOMMERCE_API_URL`: WooCommerce REST API URL.
+    *   `VITE_WOOCOMMERCE_CONSUMER_KEY` and `VITE_WOOCOMMERCE_CONSUMER_SECRET`: API keys obtained from WooCommerce settings. (Refer to `woocommerce_setup_guide.md`).
 
-4.  **WordPress Backend Kurulumu:**
+4.  **WordPress Backend Setup:**
 
-    *   WordPress kurulumunuzun ve WooCommerce eklentisinin aktif olduğundan emin olun.
-    *   WooCommerce REST API'sini etkinleştirin ve yukarıdaki `.env` dosyasında kullanılacak Consumer Key ve Consumer Secret'ı oluşturun. (`woocommerce_setup_guide.md` dosyasına bakın).
-    *   Gerekli sayfaları (Hizmetler, Ürünler, Blog vb.) WordPress panelinden oluşturun ve içeriklerini girin.
+    *   Ensure your WordPress installation and WooCommerce plugin are active.
+    *   Enable the WooCommerce REST API and generate the Consumer Key and Consumer Secret to be used in the `.env` file above. (Refer to `woocommerce_setup_guide.md`).
+    *   Create necessary pages (Services, Products, Blog, etc.) from the WordPress panel and enter their content.
 
-5.  **Geliştirme Sunucusunu Başlatma:**
+5.  **Starting Development Server:**
 
     ```bash
     pnpm run dev
     ```
 
-    Tarayıcınızda `http://localhost:5173/` adresini ziyaret edin.
+    Visit `http://localhost:5173/` in your browser.
 
-6.  **Üretim İçin Derleme:**
+6.  **Building for Production:**
 
     ```bash
     pnpm run build
     ```
 
-    Bu komut, `dist` klasörüne optimize edilmiş üretim dosyalarını oluşturacaktır.
+    This command will create optimized production files in the `dist` folder.
 
-### Deployment Kılavuzları:
+### Deployment Guides:
 
-Farklı hosting platformlarında deployment adımları için `hosting_deployment_notes.md` dosyasına bakınız.
+Refer to `hosting_deployment_notes.md` for deployment steps on different hosting platforms.
 
-### Modüler Özellik Yapılandırması:
+### Modular Feature Configuration:
 
-E-ticaret ve diğer modüler özelliklerin etkinleştirilmesi/devre dışı bırakılması için `FEATURES_CONFIGURATION.md` dosyasına bakınız.
+Refer to `FEATURES_CONFIGURATION.md` for enabling/disabling e-commerce and other modular features.
 
-### Test ve Kalite Kontrol:
+### Testing and Quality Control:
 
-Manuel ve otomatik test senaryoları için `TESTING.md` dosyasına bakınız.
+Refer to `TESTING.md` for manual and automated test scenarios.
 
-### Logo ve Icon Güncellemesi:
+### Logo and Icon Updates:
 
-*   **Logo:** Header bileşenindeki logo placeholder'ını aktif etmek için `src/components/Header.jsx` dosyasındaki `showLogo` değişkenini `true` yapın ve `public/logo.svg` (veya istediğiniz formatta) dosyanızı yerleştirin.
-*   **Glassmorphism Iconlar:** `icons8.com/icons/all--style-liquid-glass` adresinden beğendiğiniz iconları indirip `public/icons` klasörüne yerleştirebilir ve `VideoStorytellingModule.jsx` ile `KeywordMarquee.jsx` dosyalarındaki icon importlarını güncelleyebilirsiniz. Mevcut durumda Lucide React iconları glassmorphism sarmalayıcı ile kullanılmaktadır.
-
-
+*   **Logo:** To activate the logo placeholder in the Header component, set the `showLogo` variable to `true` in `src/components/Header.jsx` and place your `public/logo.svg` (or desired format) file.
+*   **Glassmorphism Icons:** You can download your preferred icons from `icons8.com/icons/all--style-liquid-glass` and place them in the `public/icons` folder, then update the icon imports in `VideoStorytellingModule.jsx` and `KeywordMarquee.jsx` files. Currently, Lucide React icons are used with a glassmorphism wrapper.
