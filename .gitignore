@@ -11,3 +11,13 @@ yarn-error.log*
 *.swp
 *.swo
 reference_page/
+live-errors.txt
+package-lock.json
+FEATURES_CONFIGURATION.md
+hosting_deployment_notes.md
+new_requirements_analysis.md
+project_scope_3d_storytelling.md
+project_scope_metal_industry.md
+TESTING.md
+woocommerce_ecommerce_plan.md
+woocommerce_setup_guide.md
