@@ -75,6 +75,7 @@ export const ProductsSection = () => {
               title={product.title}
               description={product.description}
               icon={product.icon}
+              link={product.link}
               delay={index * 0.1}
             />
           ))}

@@ -28,17 +28,16 @@ export const Navbar = ({ onHeightChange }) => {
 
   return (
     <motion.div
-      className="hidden md:flex justify-center fixed top-4 z-50 transition-all duration-50 max-w-fit left-1/2 transform -translate-x-1/2"
+      className="flex justify-center fixed top-4 z-50 transition-all duration-50 max-w-fit left-1/2 transform -translate-x-1/2 md:flex"
       animate={{ y: showNavbar ? 0 : -100 }}
       transition={{ delay: showNavbar ? 0 : 0.2 }}
     >
       <nav
-        className="flex items-center p-2 rounded-lg bg-background/50 backdrop-blur-lg border border-border shadow-lg"
+        className="flex flex-col md:flex-row items-center p-2 rounded-lg bg-background/50 backdrop-blur-lg border border-border shadow-lg"
       >
         {navItems.map((item, index) => (
           <motion.div
             key={item.href}
-            animate={{ marginLeft: isAtTop ? (index === 0 ? 0 : 8) : (index === 0 ? 0 : 32) }}
           >
             <Link to={item.href}>
               <motion.div
