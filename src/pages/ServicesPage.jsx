@@ -6,19 +6,19 @@ const services = [
   {
     title: 'Apkant Büküm',
     description: 'Hassas ve karmaşık metal büküm işlemleri için modern CNC Apkant makinelerimizle hizmetinizdeyiz.',
-    icon: '/icons/icons8-brake-discs-100.png',
+    icon: 'icons/icons8-brake-discs-100.png',
     link: '/services/apkant-bukum',
   },
   {
     title: 'CNC Lazer Kesim',
     description: 'Yüksek hassasiyetli ve hızlı lazer kesim teknolojisi ile metal parçalarınızı mükemmel şekilde işliyoruz.',
-    icon: '/icons/icons8-flash-on-100.png',
+    icon: 'icons/icons8-flash-on-100.png',
     link: '/services/cnc-lazer-kesim',
   },
   {
     title: 'Gaz Altı Kaynak',
     description: 'MIG/MAG kaynak yöntemleriyle dayanıklı ve estetik kaynak çözümleri sunuyoruz.',
-    icon: '/icons/icons8-gas-100.png',
+    icon: 'icons/icons8-gas-100.png',
     link: '/services/gaz-alti-kaynak',
   },
 ];
