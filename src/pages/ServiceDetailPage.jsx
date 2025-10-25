@@ -67,10 +67,10 @@ const serviceDetails = {
 };
 
 const getIconForFeature = (feature) => {
-  if (feature.includes('hassasiyet')) return <GlassmorphismIcon src="icons/icons8-gear-100.png" alt="hassasiyet" className="w-5 h-5 text-primary" />;
-  if (feature.includes('kesim')) return <GlassmorphismIcon src="icons/icons8-flash-on-100.png" alt="kesim" className="w-5 h-5 text-primary" />;
-  if (feature.includes('kaynak')) return <GlassmorphismIcon src="icons/icons8-gas-100.png" alt="kaynak" className="w-5 h-5 text-primary" />;
-  return <GlassmorphismIcon src="icons/icons8-tools-100.png" alt="genel" className="w-5 h-5 text-primary" />;
+  if (feature.includes('hassasiyet')) return <GlassmorphismIcon src="../icons/icons8-gear-100.png" alt="hassasiyet" className="w-5 h-5 text-primary" />;
+  if (feature.includes('kesim')) return <GlassmorphismIcon src="../icons/icons8-flash-on-100.png" alt="kesim" className="w-5 h-5 text-primary" />;
+  if (feature.includes('kaynak')) return <GlassmorphismIcon src="../icons/icons8-gas-100.png" alt="kaynak" className="w-5 h-5 text-primary" />;
+  return <GlassmorphismIcon src="../icons/icons8-tools-100.png" alt="genel" className="w-5 h-5 text-primary" />;
 };
 
 export const ServiceDetailPage = () => {
