@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const GlassmorphismIcon = ({ Icon, isActive, className = '' }) => {
+const GlassmorphismIcon = ({ Icon, src, alt, isActive, className = '' }) => {
   return (
     <motion.div
       initial={{ scale: 0.8, opacity: 0.5 }}
@@ -15,7 +15,8 @@ const GlassmorphismIcon = ({ Icon, isActive, className = '' }) => {
         border: '1px solid rgba(255, 255, 255, 0.3)',
       }}
     >
-      <Icon className="w-8 h-8 text-white" />
+      {Icon && <Icon className="w-8 h-8 text-white" />}
+      {src && <img src={src} alt={alt} className="w-8 h-8" />}
     </motion.div>
   );
 };

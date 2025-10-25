@@ -81,9 +81,15 @@ export const ProductsPage = () => {
   const fetchCategories = async () => {
     try {
       const { data } = await getProductCategories({ per_page: 20 });
-      setCategories(data);
+      if (Array.isArray(data)) {
+        setCategories(data);
+      } else {
+        setCategories([]);
+        console.error('Kategori verisi bir dizi değil:', data);
+      }
     } catch (err) {
       console.error('Kategoriler yüklenirken hata oluştu:', err);
+      setCategories([]);
     }
   };
 

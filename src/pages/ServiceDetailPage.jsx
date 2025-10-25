@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import GlassmorphismIcon from '../components/GlassmorphismIcon';
 
 // Demo data for services
@@ -48,7 +49,7 @@ const serviceDetails = {
     title: 'Gaz Altı Kaynak (MIG/MAG) Hizmetleri',
     description: 'MIG/MAG kaynak yöntemleriyle dayanıklı ve estetik kaynak çözümleri sunuyoruz. Deneyimli ekibimiz ve modern ekipmanlarımızla her türlü kaynak ihtiyacınıza profesyonel çözümler üretiyoruz.',
    image: 
-'/videos/gas_welding.mp4',
+'/videos/welding.mp4',
     features: [
       'MIG (Metal Inert Gas) ve MAG (Metal Active Gas) kaynak yöntemleri',
       'Çelik, paslanmaz çelik ve alüminyum kaynakları',
@@ -181,9 +182,10 @@ export const ServiceDetailPage = () => {
           >
             <Link to="/contact">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <button className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-xl shadow-sm text-primary-foreground bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                <Button size="lg" variant="outline" className="px-8 rounded-xl backdrop-blur-sm">
                   Hizmetlerimiz Hakkında Teklif Alın
-                </button>
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
               </motion.div>
             </Link>
           </motion.div>

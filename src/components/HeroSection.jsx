@@ -1,8 +1,8 @@
-import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import { ArrowRight, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 export const HeroSection = () => {
   const mouseX = useMotionValue(0);
@@ -20,8 +20,8 @@ export const HeroSection = () => {
       mouseY.set(y);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
 
   // 3D paralaks transformları
@@ -30,51 +30,27 @@ export const HeroSection = () => {
   const translateZ = useTransform(mouseX, [-0.5, 0.5], [-20, 20]);
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      id="home" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      id="home"
+      className="relative h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 -z-10">
-        <img
-          src="/src/assets/cnc-laser-cutting.jpg"
-          alt="Metal İşleme Atölyesi"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-background/70 dark:bg-background/80" />
-        
-        {/* Grid Pattern Layer */}
-        <motion.div 
-          className="absolute inset-0 opacity-20"
+      <div className="absolute inset-0 z-0 dark:invert-1">
+        <div
+          className="absolute inset-0 opacity-35 pointer-events-none dark:invert"
           style={{
-            backgroundImage: `
-              linear-gradient(to right, currentColor 1px, transparent 1px),
-              linear-gradient(to bottom, currentColor 1px, transparent 1px)
-            `,
-            backgroundSize: '40px 40px',
-            color: 'var(--primary)',
-          }}
-          animate={{
-            backgroundPosition: ['0px 0px', '40px 40px'],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: 'linear',
+            backgroundImage: "url(/noise.webp), url(/grid-background.svg)",
+            backgroundSize: "auto, cover",
+            backgroundPosition: "0 0, center",
+            backgroundRepeat: "repeat, no-repeat",
+            maskImage:
+              "radial-gradient(ellipse 70% 50% at center, black 40%, transparent 70%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 70% 50% at center, black 40%, transparent 70%)",
+            filter: "blur(0.5px)",
           }}
         />
-
-        {/* Eliptik Maske (Radyal Degrade) */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: 'radial-gradient(ellipse at center, transparent 0%, transparent 30%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0.6) 100%)',
-          }}
-        />
-        
-        {/* Noise Texture Overlay */}
-        <div className="absolute inset-0 opacity-[0.015] bg-noise" />
       </div>
 
       {/* 3D Metal Parça (Paralaks Efekti) */}
@@ -84,8 +60,8 @@ export const HeroSection = () => {
           rotateX,
           rotateY,
           translateZ,
-          transformStyle: 'preserve-3d',
-          perspective: '1000px',
+          transformStyle: "preserve-3d",
+          perspective: "1000px",
         }}
       >
         <div className="w-full h-full rounded-lg bg-gradient-to-br from-primary/40 to-accent/40 backdrop-blur-sm border border-primary/20 shadow-2xl" />
@@ -97,8 +73,8 @@ export const HeroSection = () => {
           rotateX: useTransform(rotateX, (v) => -v),
           rotateY: useTransform(rotateY, (v) => -v),
           translateZ: useTransform(translateZ, (v) => -v),
-          transformStyle: 'preserve-3d',
-          perspective: '1000px',
+          transformStyle: "preserve-3d",
+          perspective: "1000px",
         }}
       >
         <div className="w-full h-full rounded-full bg-gradient-to-tr from-accent/40 to-primary/40 backdrop-blur-sm border border-accent/20 shadow-2xl" />
@@ -114,7 +90,9 @@ export const HeroSection = () => {
             className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-accent/10 backdrop-blur-sm border border-accent/20 mb-8"
           >
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-foreground/80">Hassas Metal İşleme Çözümleri</span>
+            <span className="text-sm font-medium text-foreground/80">
+              Hassas Metal İşleme Çözümleri
+            </span>
           </motion.div>
 
           {/* Main Heading */}
@@ -128,9 +106,7 @@ export const HeroSection = () => {
               Metal İşlemede
             </span>
             <br />
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              Yenilikçi Çözümler
-            </span>
+            <span className="">Yenilikçi Çözümler</span>
           </motion.h1>
 
           {/* Description */}
@@ -140,7 +116,8 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl text-foreground/70 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            Apkant bükümden CNC lazer kesime, gaz altı kaynaktan özel imalata kadar tüm metal işleme ihtiyaçlarınızda güvenilir ortağınız.
+            Apkant bükümden CNC lazer kesime, gaz altı kaynaktan özel imalata
+            kadar tüm metal işleme ihtiyaçlarınızda güvenilir ortağınız.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -152,7 +129,10 @@ export const HeroSection = () => {
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link to="/services">
-                <Button size="lg" className="group px-8 py-6 text-lg rounded-xl shadow-lg">
+                <Button
+                  size="lg"
+                  className="group px-8 py-6 text-lg rounded-xl shadow-lg"
+                >
                   Hizmetlerimizi Keşfet
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -160,7 +140,11 @@ export const HeroSection = () => {
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="px-8 py-6 text-lg rounded-xl backdrop-blur-sm">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="px-8 py-6 text-lg rounded-xl backdrop-blur-sm"
+                >
                   Teklif Alın
                 </Button>
               </Link>
@@ -175,9 +159,9 @@ export const HeroSection = () => {
             className="mt-20 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
           >
             {[
-              { value: '20+', label: 'Yıllık Tecrübe' },
-              { value: '500+', label: 'Tamamlanan Proje' },
-              { value: '99%', label: 'Müşteri Memnuniyeti' },
+              { value: "20+", label: "Yıllık Tecrübe" },
+              { value: "500+", label: "Tamamlanan Proje" },
+              { value: "99%", label: "Müşteri Memnuniyeti" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -200,7 +184,10 @@ export const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
-        transition={{ opacity: { delay: 1.5 }, y: { duration: 2, repeat: Infinity } }}
+        transition={{
+          opacity: { delay: 1.5 },
+          y: { duration: 2, repeat: Infinity },
+        }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex items-start justify-center p-2">
@@ -214,4 +201,3 @@ export const HeroSection = () => {
     </section>
   );
 };
-

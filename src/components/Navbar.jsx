@@ -14,19 +14,26 @@ const navItems = [
   { label: 'İletişim', href: '/contact' },
 ];
 
-export const Navbar = () => {
+export const Navbar = ({ onHeightChange }) => {
   const { showNavbar } = useAutoHideNavbar();
   const { scrollY } = useScrollPosition();
   const isAtTop = scrollY < 50;
+  const navbarRef = useRef(null);
+
+  useEffect(() => {
+    if (navbarRef.current && onHeightChange) {
+      onHeightChange(navbarRef.current.offsetHeight);
+    }
+  }, [onHeightChange, showNavbar, isAtTop]); // Recalculate if layout changes
 
   return (
     <motion.div
-      className="hidden md:flex justify-center fixed top-4 z-40 transition-all duration-50 max-w-fit left-1/2 transform -translate-x-1/2"
+      className="hidden md:flex justify-center fixed top-4 z-50 transition-all duration-50 max-w-fit left-1/2 transform -translate-x-1/2"
       animate={{ y: showNavbar ? 0 : -100 }}
       transition={{ delay: showNavbar ? 0 : 0.2 }}
     >
       <nav
-        className="flex items-center p-2 rounded-lg bg-background/80 backdrop-blur-lg border border-border shadow-lg"
+        className="flex items-center p-2 rounded-lg bg-background/50 backdrop-blur-lg border border-border shadow-lg"
       >
         {navItems.map((item, index) => (
           <motion.div
