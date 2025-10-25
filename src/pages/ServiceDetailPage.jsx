@@ -11,7 +11,7 @@ const serviceDetails = {
     title: 'Apkant Büküm Hizmetleri',
     description: 'Hassas ve karmaşık metal büküm işlemleri için modern CNC Apkant makinelerimizle hizmetinizdeyiz. Geniş malzeme yelpazesi ve yüksek tekrarlanabilirlik ile projelerinize değer katıyoruz.',
    image: 
-'videos/apkant.mp4',
+'../videos/apkant.mp4',
     features: [
       'Yüksek hassasiyetli CNC kontrol',
       'Geniş malzeme bükme kapasitesi (çelik, paslanmaz, alüminyum)',
@@ -30,7 +30,7 @@ const serviceDetails = {
     title: 'CNC Lazer Kesim Hizmetleri',
     description: 'Yüksek hassasiyetli ve hızlı lazer kesim teknolojisi ile metal parçalarınızı mükemmel şekilde işliyoruz. Fiber lazer kesim makinelerimizle en ince detayları bile kusursuzca kesiyoruz.',
    image: 
-'videos/cnc_laser_cut.mp4',
+'../videos/cnc_laser_cut.mp4',
     features: [
       'Fiber lazer teknolojisi ile yüksek kesim hızı',
       'Çelik, paslanmaz çelik, alüminyum, bakır gibi farklı metallerin kesimi',
@@ -49,7 +49,7 @@ const serviceDetails = {
     title: 'Gaz Altı Kaynak (MIG/MAG) Hizmetleri',
     description: 'MIG/MAG kaynak yöntemleriyle dayanıklı ve estetik kaynak çözümleri sunuyoruz. Deneyimli ekibimiz ve modern ekipmanlarımızla her türlü kaynak ihtiyacınıza profesyonel çözümler üretiyoruz.',
    image: 
-'videos/welding.mp4',
+'../videos/welding.mp4',
     features: [
       'MIG (Metal Inert Gas) ve MAG (Metal Active Gas) kaynak yöntemleri',
       'Çelik, paslanmaz çelik ve alüminyum kaynakları',
