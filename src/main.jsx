@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollSmoother);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/mayasan-page/">
       <App />
     </BrowserRouter>
   </React.StrictMode>,

@@ -40,7 +40,7 @@ export const HeroSection = () => {
         <div
           className="absolute inset-0 opacity-35 pointer-events-none dark:invert"
           style={{
-            backgroundImage: "url(/noise.webp), url(/grid-background.svg)",
+            backgroundImage: "url(noise.webp), url(grid-background.svg)",
             backgroundSize: "auto, cover",
             backgroundPosition: "0 0, center",
             backgroundRepeat: "repeat, no-repeat",

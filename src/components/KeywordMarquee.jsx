@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 
 const KeywordMarquee = () => {
   const keywords = [
-    { text: 'CNC Lazer Kesim', icon: '/icons/icons8-flash-on-100.png' },
-    { text: 'Apkant Büküm', icon: '/icons/icons8-brake-discs-100.png' },
-    { text: 'CNC Torna', icon: '/icons/icons8-gear-100.png' },
-    { text: 'CNC Freze', icon: '/icons/icons8-tools-100.png' },
-    { text: 'Gaz Altı Kaynak', icon: '/icons/icons8-gas-100.png' },
-    { text: 'Metal İşleme', icon: '/icons/icons8-factory-100.png' },
-    { text: 'Özel İmalat', icon: '/icons/icons8-archive-list-of-parts-100.png' },
-    { text: 'Hassas Kesim', icon: '/icons/icons8-cut-100.png' },
-    { text: 'Seri Üretim', icon: '/icons/icons8-manufacturing-100.png' },
-    { text: 'Kalite Kontrol', icon: '/icons/icons8-check-mark-100.png' },
+    { text: 'CNC Lazer Kesim', icon: 'icons/icons8-flash-on-100.png' },
+    { text: 'Apkant Büküm', icon: 'icons/icons8-brake-discs-100.png' },
+    { text: 'CNC Torna', icon: 'icons/icons8-gear-100.png' },
+    { text: 'CNC Freze', icon: 'icons/icons8-tools-100.png' },
+    { text: 'Gaz Altı Kaynak', icon: 'icons/icons8-gas-100.png' },
+    { text: 'Metal İşleme', icon: 'icons/icons8-factory-100.png' },
+    { text: 'Özel İmalat', icon: 'icons/icons8-archive-list-of-parts-100.png' },
+    { text: 'Hassas Kesim', icon: 'icons/icons8-cut-100.png' },
+    { text: 'Seri Üretim', icon: 'icons/icons8-manufacturing-100.png' },
+    { text: 'Kalite Kontrol', icon: 'icons/icons8-check-mark-100.png' },
   ];
 
   // Keywordleri 2 kez tekrarla (seamless loop için)

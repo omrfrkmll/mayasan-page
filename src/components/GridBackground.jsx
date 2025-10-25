@@ -6,7 +6,7 @@ export const GridBackground = () => {
     <motion.div
       className="absolute inset-0 opacity-20 invert dark:invert-1"
       style={{
-        backgroundImage: 'url(/grid-background.svg)',
+        backgroundImage: 'url(grid-background.svg)',
         // backgroundSize: '40px 40px',
         filter: 'var(--grid-filter)',
         maskImage: 'radial-gradient(ellipse at center, white 20%, transparent 70%)',

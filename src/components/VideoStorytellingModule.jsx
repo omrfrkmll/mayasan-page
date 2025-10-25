@@ -11,7 +11,7 @@ const VideoStorytellingModule = () => {
   const scenes = [
     {
       id: 1,
-      video: '/videos/cnc_laser_cut.mp4',
+      video: 'videos/cnc_laser_cut.mp4',
       title: 'CNC Lazer Kesim',
       description: 'Yüksek hassasiyetli lazer kesim teknolojisi ile metal parçalarınızı mükemmel şekilde işliyoruz.',
       features: [
@@ -19,12 +19,12 @@ const VideoStorytellingModule = () => {
         '0.5mm - 25mm kalınlık aralığı',
         'Çelik, paslanmaz, alüminyum',
       ],
-      icon: '/icons/icons8-flash-on-100.png',
+      icon: 'icons/icons8-flash-on-100.png',
       cardPosition: { x: '-15%', y: '10%' },
     },
     {
       id: 2,
-      video: '/videos/apkant.mp4',
+      video: 'videos/apkant.mp4',
       title: 'Apkant Büküm',
       description: 'Hassas ve karmaşık metal büküm işlemleri için modern CNC Apkant makinelerimizle hizmetinizdeyiz.',
       features: [
@@ -32,12 +32,12 @@ const VideoStorytellingModule = () => {
         'Karmaşık geometriler',
         'Tekrarlanabilir kalite',
       ],
-      icon: '/icons/icons8-brake-discs-100.png',
+      icon: 'icons/icons8-brake-discs-100.png',
       cardPosition: { x: '15%', y: '-10%' },
     },
     {
       id: 3,
-      video: '/videos/cnc_torna.mp4',
+      video: 'videos/cnc_torna.mp4',
       title: 'CNC Torna',
       description: 'Talaşlı imalat kapasitemizle seri üretim ve özel parça üretiminde uzmanız.',
       features: [
@@ -45,12 +45,12 @@ const VideoStorytellingModule = () => {
         'Geniş malzeme yelpazesi',
         'Mikron hassasiyeti',
       ],
-      icon: '/icons/icons8-gear-100.png',
+      icon: 'icons/icons8-gear-100.png',
       cardPosition: { x: '-20%', y: '-5%' },
     },
     {
       id: 4,
-      video: '/videos/cnc_freze.mp4',
+      video: 'videos/cnc_freze.mp4',
       title: 'CNC Freze',
       description: 'CNC freze makinelerimizle karmaşık parçaları yüksek hassasiyetle üretiyoruz.',
       features: [
@@ -58,7 +58,7 @@ const VideoStorytellingModule = () => {
         'Karmaşık geometriler',
         'Yüksek yüzey kalitesi',
       ],
-      icon: '/icons/icons8-tools-100.png',
+      icon: 'icons/icons8-tools-100.png',
       cardPosition: { x: '18%', y: '8%' },
     },
   ];

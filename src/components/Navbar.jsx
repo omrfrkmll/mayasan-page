@@ -33,7 +33,10 @@ export const Navbar = ({ onHeightChange }) => {
       transition={{ delay: showNavbar ? 0 : 0.2 }}
     >
       <nav
-        className="flex flex-col md:flex-row items-center p-2 rounded-lg bg-background/50 backdrop-blur-lg border border-border shadow-lg"
+        className={cn(
+          "flex flex-col md:flex-row items-center p-2 rounded-lg bg-background/50 backdrop-blur-lg border border-border shadow-lg transition-all duration-100",
+          isAtTop ? "gap-x-4" : "gap-x-8"
+        )}
       >
         {navItems.map((item, index) => (
           <motion.div

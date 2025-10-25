@@ -2,12 +2,12 @@
 import { motion } from 'framer-motion';
 
 const companies = [
-  { name: 'Company A', logo: '/logos/company-a.svg' },
-  { name: 'Company B', logo: '/logos/company-b.svg' },
-  { name: 'Company C', logo: '/logos/company-c.svg' },
-  { name: 'Company D', logo: '/logos/company-d.svg' },
-  { name: 'Company E', logo: '/logos/company-e.svg' },
-  { name: 'Company F', logo: '/logos/company-f.svg' },
+  { name: 'Company A', logo: 'logos/company-a.svg' },
+  { name: 'Company B', logo: 'logos/company-b.svg' },
+  { name: 'Company C', logo: 'logos/company-c.svg' },
+  { name: 'Company D', logo: 'logos/company-d.svg' },
+  { name: 'Company E', logo: 'logos/company-e.svg' },
+  { name: 'Company F', logo: 'logos/company-f.svg' },
 ];
 
 export const ReferenceCompaniesSection = () => {
